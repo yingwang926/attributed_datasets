@@ -1,0 +1,3 @@
+# Synthetic
+
+The synthetic large dataset named `Synthetic` is constructed with 105000 nodes and 830159 edges. To generate our synthetic dataset, the function `random_partition_graph()` in the networkx package of Python is used. More specifically, the number of community is set as `3` and the size of community is set as $[3\times10^4, 3.5\times10^4, 4\times10^4]$. Nodes in the same community are connected with probability $2.5\times10^{-4}$ and nodes of different communities are connected with probability $1\times10^{-4}$. The attribute of each node is a vector of size 100. Initially, each bit of the vector is randomly assigned 0 or 1. When all neighbors of a node have attributes, the attribute of this node is rounding the average attribute value of its neighbors.
